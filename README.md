@@ -44,7 +44,7 @@ pip install Flask
 ```
 
 ```bash
-python app.py
+uvicorn app:app --reload
 ```
 
 Visit [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) from your browser to access Swagger. You can upload an image through the predict endpoint and receive a JSON response. Use the `--reload` argument to see immediate effects when changing code.

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(176, 250, 80);
+            color: #333;
+        }
+
+        #prediction-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3px;
+        }
+
+        #prediction-form label {
+            margin-bottom: 3px;
+        }
+
+        #prediction-form input {
+            margin-bottom: 3px;
+        }
+
+        #prediction-form button {
+            margin-top: 3px;
+            margin-bottom: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Crop Details</h1>
+    <form id="prediction-form">
+        <label for="N">Nitrogen (N):</label>
+        <input type="text" id="N" name="N"><br><br>
+        <label for="P">Phosphorus (P):</label>
+        <input type="text" id="P" name="P"><br><br>
+        <label for="K">Potassium (K):</label>
+        <input type="text" id="K" name="K"><br><br>
+        <label for="temperature">Temperature:</label>
+        <input type="text" id="temperature" name="temperature"><br><br>
+        <label for="humidity">Humidity:</label>
+        <input type="text" id="humidity" name="humidity"><br><br>
+        <label for="ph">pH:</label>
+        <input type="text" id="ph" name="ph"><br><br>
+        <label for="rainfall">Rainfall:</label>
+        <input type="text" id="rainfall" name="rainfall"><br><br>
+        <button type="button" onclick="predict()">Predict</button>
+    </form>
+    <div id="prediction-result"></div>
+    <script>
+        function predict() {
+            var formData = new FormData(document.getElementById('prediction-form'));
+
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('prediction-result').innerText = 'Prediction: ' + data.prediction;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

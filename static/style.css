@@ -1,0 +1,27 @@
+body {
+    background-image: url("E:\crop recommeded system fast\static\Icon\Farming.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #aff059;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+form {
+    background-color: rgba(150, 232, 79, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin-top: 20px;
+}
+
+#prediction-result {
+    margin-top: 20px;
+    color: #000;
+}

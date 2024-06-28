@@ -21,4 +21,4 @@ label
 
 Dataset Link : https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset
 
-### Random Forest Gives best Result
+### Random Forest Gives Best Result

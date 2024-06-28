@@ -43,10 +43,6 @@ pip install -r requirements.txt
 After installing the necessary packages, run the following command from the project root directory to start the app:
 
 ```bash
-pip install Flask
-```
-
-```bash
 uvicorn app:app --reload
 ```
 

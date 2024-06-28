@@ -26,6 +26,4 @@ Dataset Link : https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-
 ### Random Forest Gives Best Result
 
 ### Output 
-https://github.com/raviatkumar/Crop-Recommended-System/blob/main/Output/crop.PNG?raw=true
-
-
+![Alt text](https://github.com/raviatkumar/Crop-Recommended-System/blob/main/Output/crop.PNG?raw=true)
